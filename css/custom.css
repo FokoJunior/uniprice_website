@@ -1,0 +1,933 @@
+/* Animations globales */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet de hover sur les cartes */
+.card, .service-item, .product-item {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover, .service-item:hover, .product-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet de hover sur les images */
+.img-hover-zoom {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.img-hover-zoom img {
+    transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Animations des boutons */
+.btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.2);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+/* Navigation et menu */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item:hover::after,
+.navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+
+/* Bannière améliorée */
+.banner-carousel {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+.banner-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.banner-slide.active .banner-content h1,
+.banner-slide.active .banner-content p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Boutons de navigation de la bannière */
+.banner-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+}
+
+.banner-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.banner-nav.prev {
+    left: 20px;
+}
+
+.banner-nav.next {
+    right: 20px;
+}
+
+.banner-nav i {
+    line-height: 50px;
+}
+/* 
+.img-fluid {
+    width: 50px !important;
+} */
+/* Indicateurs de slide */
+.banner-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.banner-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-carousel {
+        height: 70vh;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+
+    .banner-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .banner-nav.prev {
+        left: 10px;
+    }
+
+    .banner-nav.next {
+        right: 10px;
+    }
+}
+
+/* Cards avec effet de profondeur */
+.service-detail, .product-detail {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 
+        8px 8px 16px #d1d1d1,
+        -8px -8px 16px #ffffff;
+}
+
+/* Effet de survol sur les images des services */
+.service-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.service-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.4));
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.service-item:hover .service-img::after {
+    opacity: 1;
+}
+
+/* Formulaire de contact amélioré */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Footer amélioré */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #3498db);
+    animation: gradient 3s linear infinite;
+    background-size: 200% 100%;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Effet de scroll doux */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner amélioré */
+#spinner {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25rem;
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+    
+    .service-item, .product-item {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animations de page */
+.page-transition {
+    animation: pageLoad 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Variables CSS */
+:root {
+    --primary: #3498db;
+    --secondary: #2ecc71;
+    --light: #ffffff;
+    --dark: #333333;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Couleurs de fond */
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.bg-light { background-color: var(--light) !important; }
+.bg-dark { background-color: var(--dark) !important; }
+
+/* Couleurs de texte */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-light { color: var(--light) !important; }
+.text-dark { color: var(--dark) !important; }
+
+/* Boutons avec animations */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 102, 102, 0.3);
+}
+
+/* Liens avec animations */
+a {
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+a:hover {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+/* Bordures */
+.border-primary { border-color: var(--primary) !important; }
+.border-secondary { border-color: var(--secondary) !important; }
+
+/* Navigation avec animations */
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-light .navbar-nav .nav-link:hover:after,
+.navbar-light .navbar-nav .nav-link.active:after {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Cards et éléments produits */
+.product-item {
+    transition: all 0.4s ease;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-overlay {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.product-item:hover .product-overlay {
+    opacity: 1;
+}
+
+/* Icônes avec animations */
+.icon-box {
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+    transform: rotateY(180deg);
+}
+
+/* Section titre avec animation */
+.section-title::after {
+    background: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* Back to top button avec animation */
+.back-to-top {
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+/* Testimonials avec animation */
+.testimonial-item {
+    transition: all 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section et Carousel */
+.hero-header {
+    background: url(../img/hero-bg.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.hero-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-header img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+.carousel-item {
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-item .btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(var(--primary), 0.8);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.carousel-item .btn:hover {
+    background: var(--primary);
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    border-radius: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: var(--secondary);
+}
+
+/* Animation pour le carousel */
+.carousel-item.active {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.pagination .page-item .page-link {
+    border: 2px solid #3498db;
+    background-color: white;
+    color: #3498db;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item:hover .page-link {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Product Animations */
+.product-item .product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(52, 152, 219, 0.8);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.product-item:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-overlay .btn {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.product-item:hover .product-overlay .btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Dynamic Banner */
+.banner-carousel {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 80%;
+    max-width: 800px;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.2s;
+}
+
+.banner-slide.active .banner-content h1,
+.banner-slide.active .banner-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Filter Buttons Animation */
+.btn-secondary {
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    border: 2px solid #3498db;
+    background-color: white;
+    color: #3498db;
+}
+
+.btn-secondary:hover,
+.btn-secondary.active {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Product Grid Layout */
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Hero Header */
+.hero-header {
+    background: url(../img/hero-bg.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.hero-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Image Carousel */
+.hero-image-carousel {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-image-item.active {
+    opacity: 1;
+}
+
+.hero-image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-image-item .image-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: auto;
+    min-width: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hero-image-item.active .image-title {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}

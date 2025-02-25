@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Uniprice Dwash - Solutions d'Entretien Professionnelles</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="produits entretien, nettoyage, détergents, désinfectants, produits ménagers" name="keywords">
+    <meta content="Uniprice Dwash - Fabricant de produits d'entretien chimiques et articles de ménage de qualité" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="img/logo1.png" rel="icon">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-light"></i> <a href="#" class="text-light">Bependa 7e, Douala</a></small>
+                    <small class="me-3"><i class="fas fa-phone-alt me-2 text-light"></i> <a href="tel:+237674127256" class="text-light">+237 674 127 256</a></small>
+                    <small class="me-3"><i class="fas fa-phone-alt me-2 text-light"></i> <a href="tel:+237693444323" class="text-light">+237 693 444 323</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-light"></i><a href="mailto:uniprice83@gmail.com" class="text-light">uniprice83@gmail.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-light"><small class="text-light mx-2">Politique de Confidentialité</small>/</a>
+                    <a href="#" class="text-light"><small class="text-light mx-2">Conditions d'Utilisation</small>/</a>
+                    <a href="#" class="text-light"><small class="text-light ms-2">Nous Contacter</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Uniprice</h1></a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="products.php" class="nav-item nav-link">Produits</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="about.html" class="nav-item nav-link">À Propos</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <!-- <div class="d-flex m-3 me-0">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                        <a href="#" class="position-relative me-4 my-auto">
+                            <i class="fa fa-shopping-bag fa-2x"></i>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">0</span>
+                        </a>
+                    </div> -->
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">Spécialistes en produits d'entretien et de ménage</h1>
+                    <p class="animated slideInDown">Nous fabriquons des solutions chimiques innovantes pour un nettoyage efficace et une maison étincelante. Découvrez notre gamme de détergents, désinfectants et produits ménagers conçus pour simplifier votre quotidien.</p>
+                    <p class="mb-4 animated slideInDown">Propreté. Qualité. Confiance.</p>
+                    <a href="products.php" class="btn btn-primary py-3 px-4 animated slideInDown">Nos Produits</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-carousel">
+                        <div class="hero-image-item active">
+                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-5.png" alt="Détergents">
+                            <h3 class="image-title">Désinfectants Puissants</h3>
+                        </div>
+                        <div class="hero-image-item">
+                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-10.png" alt="Désinfectants">
+                            <h3 class="image-title">Liquide Vaisselle</h3>
+                        </div>
+                        <div class="hero-image-item">
+                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-6.png" alt="Lave Vitre">
+                            <h3 class="image-title">Lave Vitre</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-item position-relative bg-light d-flex p-3">
+                        <div class="icon-box bg-primary me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-flask fa-2x text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Qualité Certifiée</h5>
+                            <p class="mb-0">Produits conformes aux normes internationales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-item position-relative bg-light d-flex p-3">
+                        <div class="icon-box bg-primary me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-leaf fa-2x text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Éco-responsable</h5>
+                            <p class="mb-0">Solutions respectueuses de l'environnement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-item position-relative bg-light d-flex p-3">
+                        <div class="icon-box bg-primary me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-phone-alt fa-2x text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Support 24/7</h5>
+                            <p class="mb-0">Assistance technique professionnelle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;" data-aos="fade-up">
+                <h1 class="display-4">Nos Produits Phares</h1>
+                <p>Des solutions adaptées à tous vos besoins d'entretien professionnel</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/image_produits/product-56.png" alt="Détergent industriel" style="width: 380px; height: 480px;">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-primary">Détails</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5>Détergent Liquide Vaisselle</h5>
+                            <p>Solution puissante pour surfaces difficiles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/image_produits/product-25.png" alt="Désinfectant" style="width: 380px; height: 480px;">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-primary">Détails</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5>Javel Premium</h5>
+                            <p>Élimine 99.9% des bactéries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/image_produits/product-26.png" alt="Nettoyant multi-surfaces" style="width: 380px; height: 480px;">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-primary">Détails</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5>Nettoyant Multi-Surfaces</h5>
+                            <p>Solution polyvalente pour surfaces et objets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-img">
+                        <img class="img-fluid" src="img/image_produits/product-40.png" alt="À propos de nous">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h1 class="display-4 mb-4">Leader en Solutions d'Entretien</h1>
+                    <p class="mb-4">Depuis plus de 20 ans, Uniprice développe des solutions innovantes pour répondre aux défis du nettoyage industriel.</p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check fa-2x text-primary me-3"></i>
+                                <h5 class="mb-0">Qualité Premium</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check fa-2x text-primary me-3"></i>
+                                <h5 class="mb-0">Service Expert</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary py-3 px-4">En Savoir Plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;" data-aos="fade-up">
+                <h1 class="display-4">Ils Nous Font Confiance</h1>
+                <p>Découvrez ce que nos clients disent de nos produits et services</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-item text-center bg-light p-4">
+                        <div class="p-4">
+                            <i class="fa fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p>Les produits Uniprice ont révolutionné notre approche du nettoyage industriel.</p>
+                            <h5>Jean Dupont</h5>
+                            <span>Directeur des Opérations, IndustrieNet</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-item text-center bg-light p-4">
+                        <div class="p-4">
+                            <i class="fa fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p>Un service client exceptionnel et des produits d'une efficacité remarquable.</p>
+                            <h5>Marie Martin</h5>
+                            <span>Responsable Entretien, HôtelLuxe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-item text-center bg-light p-4">
+                        <div class="p-4">
+                            <i class="fa fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p>La qualité et l'innovation sont au rendez-vous avec Uniprice.</p>
+                            <h5>Pierre Dubois</h5>
+                            <span>Gérant, CleanServices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white footer pt-5 mt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Pourquoi Nous Choisir</h4>
+                    <p class="mb-4">Leader dans l'innovation des solutions d'entretien professionnelles</p>
+                    <a href="#" class="btn btn-primary py-2 px-4">En Savoir Plus</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Liens Rapides</h4>
+                    <a class="btn-link" href="#">À Propos</a>
+                    <a class="btn-link" href="#">Nos Services</a>
+                    <a class="btn-link" href="#">Produits</a>
+                    <a class="btn-link" href="#">Contact</a>
+                    <div class="social-icons mt-2">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/+237693444323" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fas fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Contact</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Bependa 7e, Douala</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+237 674 127 256</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+237 693 444 323</p>
+                    <p><i class="fa fa-envelope me-3"></i>uniprice83@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Heures d'ouverture</h4>
+                    <p>Lundi - Vendredi: 8h - 17h</p>
+                    <p>Samedi: 8h - 13h</p>
+                    <p>Dimanche: Fermé</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-white">&copy; 2025 Uniprice Dwash. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/hero-carousel.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

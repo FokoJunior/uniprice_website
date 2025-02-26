@@ -1,0 +1,28 @@
+.partner-carousel {
+    overflow: hidden; /* Masque le contenu qui dépasse */
+}
+
+.partner-logo-wrapper {
+    display: flex; /* Aligne les logos horizontalement */
+    animation: scroll-left 20s linear infinite; /* Animation de défilement */
+}
+
+.partner-logo {
+    flex-shrink: 0; /* Empêche les logos de rétrécir */
+    margin-right: 30px; /* Espace entre les logos */
+}
+
+.partner-logo img {
+    max-width: 150px; /* Limite la largeur des logos */
+    height: auto;
+}
+
+/* Animation de défilement horizontal */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Commence à droite */
+    }
+    100% {
+        transform: translateX(-100%); /* Défile jusqu'à la gauche */
+    }
+}

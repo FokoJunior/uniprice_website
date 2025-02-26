@@ -26,11 +26,3 @@
         transform: translateX(-100%); /* Défile jusqu'à la gauche */
     }
 }
-
-
-
-.toto{
-    border: 1px solid black;
-    border-radius: .5rem;
-    
-}

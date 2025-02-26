@@ -21,6 +21,11 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Flexslider CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+
+<!-- Flexslider JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -28,6 +33,7 @@
     <link href="img/logo1.png" rel="icon">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet">
 </head>
 
 <body>
@@ -82,35 +88,37 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <div class="container-fluid py-5 mb-5 hero-header">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 mb-3 animated slideInDown">Spécialistes en produits d'entretien et de ménage</h1>
-                    <p class="animated slideInDown">Nous fabriquons des solutions chimiques innovantes pour un nettoyage efficace et une maison étincelante. Découvrez notre gamme de détergents, désinfectants et produits ménagers conçus pour simplifier votre quotidien.</p>
-                    <p class="mb-4 animated slideInDown">Propreté. Qualité. Confiance.</p>
-                    <a href="products.html" class="btn btn-primary py-3 px-4 animated slideInDown">Voir Nos Produits</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image-carousel">
-                        <div class="hero-image-item active">
-                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-5.png" alt="Détergents">
+<div class="container-fluid py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3 animated slideInDown">Spécialistes en produits d'entretien et de ménage</h1>
+                <p class="animated slideInDown">Nous fabriquons des solutions chimiques innovantes pour un nettoyage efficace et une maison étincelante. Découvrez notre gamme de détergents, désinfectants et produits ménagers conçus pour simplifier votre quotidien.</p>
+                <p class="mb-4 animated slideInDown">Propreté. Qualité. Confiance.</p>
+                <a href="products.html" class="btn btn-primary py-3 px-4 animated slideInDown">Voir Nos Produits</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img class="img-fluid rounded" src="img/image_produits/product-5.png" alt="Détergents">
                             <h3 class="image-title">Désinfectants Puissants</h3>
-                        </div>
-                        <div class="hero-image-item">
-                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-10.png" alt="Désinfectants">
+                        </li>
+                        <li>
+                            <img class="img-fluid rounded" src="img/image_produits/product-10.png" alt="Désinfectants">
                             <h3 class="image-title">Liquide Vaisselle</h3>
-                        </div>
-                        <div class="hero-image-item">
-                            <img class="img-fluid rounded animated zoomIn" src="img/image_produits/product-6.png" alt="Lave Vitre">
+                        </li>
+                        <li>
+                            <img class="img-fluid rounded" src="img/image_produits/product-6.png" alt="Lave Vitre">
                             <h3 class="image-title">Lave Vitre</h3>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Hero End -->
+</div>
+<!-- Hero End -->
 
     <!-- Features Start -->
     <div class="container-fluid py-5">
@@ -366,5 +374,17 @@
             once: true
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",  // Type d'animation (slide ou fade)
+            controlNav: true,     // Afficher les points de navigation
+            directionNav: true,   // Afficher les flèches de navigation
+            slideshowSpeed: 5000, // Vitesse de défilement automatique
+            animationSpeed: 600   // Vitesse de l'animation
+        });
+    });
+</script>
 </body>
 </html>

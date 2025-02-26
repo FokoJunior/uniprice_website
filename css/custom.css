@@ -931,3 +931,21 @@ a:hover {
 .zoomIn {
     animation-name: zoomIn;
 }
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-item.nav-link:hover {
+    color: #007bff !important;
+    transform: translateY(-3px);
+}

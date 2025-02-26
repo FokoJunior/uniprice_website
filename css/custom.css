@@ -635,7 +635,7 @@ a:hover {
     border-radius: 45px;
     top: 50%;
     transform: translateY(-50%);
-}
+} 
 
 .carousel-control-prev {
     left: 20px;

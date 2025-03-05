@@ -34,7 +34,7 @@ body {
 }
 
 .main-content {
-    margin-left: 250px; /* Décalage égal à la largeur de la navbar */
+    margin-left: 350px; /* Décalage égal à la largeur de la navbar */
     padding: 20px;
     width: calc(100% - 250px); /* Ajuste la largeur du contenu principal */
 }

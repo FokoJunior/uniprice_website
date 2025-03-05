@@ -1,48 +1,9 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-}
-
-.sidebar {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    padding-top: 20px;
-    background-color: #f8f9fa;
-    border-right: 1px solid #dee2e6;
-}
-
-.sidebar .nav-link {
-    padding: 10px 15px;
-    color: #333;
-}
-
-.sidebar .nav-link.active {
-    background-color: #007bff;
-    color: white;
-}
-
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-}
-
-/* styles.css */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* styles.css */
-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
 .sidebar {
@@ -51,9 +12,9 @@ body {
     top: 0;
     left: 0;
     width: 250px;
-    padding-top: 20px;
     background-color: #343a40;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
 }
 
 .sidebar .nav-link {
@@ -73,8 +34,9 @@ body {
 }
 
 .main-content {
-    margin-left: 250px;
+    margin-left: 250px; /* Décalage égal à la largeur de la navbar */
     padding: 20px;
+    width: calc(100% - 250px); /* Ajuste la largeur du contenu principal */
 }
 
 .card {
@@ -105,3 +67,6 @@ body {
 .btn {
     border-radius: 5px;
 }
+
+
+

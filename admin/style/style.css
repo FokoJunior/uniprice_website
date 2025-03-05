@@ -33,7 +33,7 @@ body {
     color: white;
 }
 
-.main-content {
+.main{
     margin-left: 350px; /* Décalage égal à la largeur de la navbar */
     padding: 20px;
     width: calc(100% - 250px); /* Ajuste la largeur du contenu principal */
